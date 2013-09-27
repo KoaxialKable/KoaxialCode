@@ -1,16 +1,22 @@
 #include <iostream>
 #include <string>
 
+enum gearTypes { HEAD_ARMOR, CHEST_ARMOR, ACCESSORY, MAIN_HAND, OFF_HAND};
+
+struct gem {
+
+};
 
 struct slot {
 	int numSides;
-
+	gem inhabitantGem;
 };
 
 struct gear {
 	string name;
+	gearTypes type;
 	int numSlots;
-
+	slot slots[];
 };
 
 using namespace std;
@@ -23,6 +29,8 @@ gear generateItem() {
 int main () {
 	gear item;
 	item = generateItem();
+
+
 	return 0;
 }
 
